@@ -1,0 +1,36 @@
+requirements:
+  - id: req_1
+    name: "Network Security Controls"
+    description: "Install and maintain network security controls to protect cardholder data"
+    lab_source: lab5_sg_drift
+    aws_service: Security Hub
+    
+  - id: req_2
+    name: "Secure Configurations"
+    description: "Apply secure configurations to all system components"
+    lab_source: lab2_ec2_inventory
+    aws_service: EC2
+    
+  - id: req_7
+    name: "Restrict Access to CHD"
+    description: "Restrict access to cardholder data by business need to know"
+    lab_source: lab3_s3_public
+    aws_service: S3
+    
+  - id: req_8
+    name: "Identify and Authenticate Users"
+    description: "Identify users and authenticate access to system components"
+    lab_source: lab4_mfa
+    aws_service: IAM
+    
+  - id: req_10
+    name: "Log and Monitor Access"
+    description: "Log and monitor all access to system components and cardholder data"
+    lab_source: lab1_cloudtrail
+    aws_service: CloudTrail
+    
+  - id: req_11
+    name: "Test Security Regularly"
+    description: "Test security of systems and networks regularly"
+    lab_source: vuln_scan_simulated
+    aws_service: Inspector

@@ -1,0 +1,112 @@
+{
+  "findings": [
+    {
+      "id": "FIND-001",
+      "requirement_id": "req_1",
+      "severity": "high",
+      "title": "Security group allows 0.0.0.0/0 on port 22",
+      "description": "Security group sg-0abc123 allows SSH access from any IP address, violating network segmentation requirements.",
+      "resource_id": "sg-0abc123def456",
+      "resource_type": "Security Group",
+      "detected_at": "2024-12-16T08:00:00Z",
+      "status": "open",
+      "remediation": "Restrict SSH access to specific IP ranges or use Session Manager"
+    },
+    {
+      "id": "FIND-002",
+      "requirement_id": "req_1",
+      "severity": "medium",
+      "title": "Security group allows broad egress",
+      "description": "Security group sg-0def456 allows all outbound traffic. Consider restricting to required destinations.",
+      "resource_id": "sg-0def456ghi789",
+      "resource_type": "Security Group",
+      "detected_at": "2024-12-16T08:00:00Z",
+      "status": "open",
+      "remediation": "Implement egress filtering to known-good destinations"
+    },
+    {
+      "id": "FIND-003",
+      "requirement_id": "req_8",
+      "severity": "critical",
+      "title": "IAM user without MFA - admin-user",
+      "description": "User 'admin-user' has console access but no MFA device configured. This user has AdministratorAccess policy.",
+      "resource_id": "arn:aws:iam::123456789012:user/admin-user",
+      "resource_type": "IAM User",
+      "detected_at": "2024-12-16T08:00:00Z",
+      "status": "open",
+      "remediation": "Enable MFA for this user immediately"
+    },
+    {
+      "id": "FIND-004",
+      "requirement_id": "req_8",
+      "severity": "high",
+      "title": "IAM user without MFA - dev-user",
+      "description": "User 'dev-user' has console access but no MFA device configured.",
+      "resource_id": "arn:aws:iam::123456789012:user/dev-user",
+      "resource_type": "IAM User",
+      "detected_at": "2024-12-16T08:00:00Z",
+      "status": "open",
+      "remediation": "Enable MFA for this user"
+    },
+    {
+      "id": "FIND-005",
+      "requirement_id": "req_8",
+      "severity": "medium",
+      "title": "IAM user without MFA - readonly-user",
+      "description": "User 'readonly-user' has console access but no MFA device configured.",
+      "resource_id": "arn:aws:iam::123456789012:user/readonly-user",
+      "resource_type": "IAM User",
+      "detected_at": "2024-12-16T08:00:00Z",
+      "status": "open",
+      "remediation": "Enable MFA for this user"
+    },
+    {
+      "id": "FIND-006",
+      "requirement_id": "req_11",
+      "severity": "critical",
+      "title": "Unpatched CVE on EC2 instance",
+      "description": "CVE-2024-1234 affects OpenSSL version installed on instance. CVSS score 9.8.",
+      "resource_id": "i-0abc123def456789",
+      "resource_type": "EC2 Instance",
+      "detected_at": "2024-12-14T08:15:00Z",
+      "status": "open",
+      "remediation": "Update OpenSSL to version 3.0.12 or later"
+    },
+    {
+      "id": "FIND-007",
+      "requirement_id": "req_11",
+      "severity": "high",
+      "title": "Outdated TLS version detected",
+      "description": "TLS 1.0 is enabled on load balancer. PCI DSS 4.0 requires TLS 1.2 or higher.",
+      "resource_id": "arn:aws:elasticloadbalancing:us-east-1:123456789012:loadbalancer/app/prod-alb/abc123",
+      "resource_type": "Application Load Balancer",
+      "detected_at": "2024-12-15T10:30:00Z",
+      "status": "open",
+      "remediation": "Update ALB security policy to ELBSecurityPolicy-TLS13-1-2-2021-06"
+    },
+    {
+      "id": "FIND-008",
+      "requirement_id": "req_7",
+      "severity": "critical",
+      "title": "S3 bucket was publicly accessible",
+      "description": "Bucket 'prod-data-bucket' had public read access enabled. Remediated on 2024-12-04.",
+      "resource_id": "arn:aws:s3:::prod-data-bucket",
+      "resource_type": "S3 Bucket",
+      "detected_at": "2024-12-01T12:00:00Z",
+      "status": "remediated",
+      "remediation": "Removed public access and enabled S3 Block Public Access"
+    },
+    {
+      "id": "FIND-009",
+      "requirement_id": "req_10",
+      "severity": "high",
+      "title": "CloudTrail not enabled in eu-west-1",
+      "description": "CloudTrail logging was not configured in eu-west-1 region. Remediated on 2024-12-08.",
+      "resource_id": "eu-west-1",
+      "resource_type": "AWS Region",
+      "detected_at": "2024-12-02T09:00:00Z",
+      "status": "remediated",
+      "remediation": "Enabled multi-region CloudTrail with S3 logging"
+    }
+  ]
+}

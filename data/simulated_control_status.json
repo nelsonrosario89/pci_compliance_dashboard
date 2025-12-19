@@ -1,0 +1,59 @@
+{
+  "snapshot_date": "2024-12-16",
+  "controls": [
+    {
+      "requirement_id": "req_1",
+      "status": "fail",
+      "finding_count": 2,
+      "last_checked": "2024-12-16T08:00:00Z",
+      "evidence_location": "s3://grc-demo-evidence/lab5/sg-drift-2024-12-16.json",
+      "details": "2 security groups with unauthorized ingress rules detected"
+    },
+    {
+      "requirement_id": "req_2",
+      "status": "pass",
+      "finding_count": 0,
+      "last_checked": "2024-12-16T08:00:00Z",
+      "evidence_location": "s3://grc-demo-evidence/lab2/ec2-inventory-2024-12-16.csv",
+      "details": "All EC2 instances have required baseline tags"
+    },
+    {
+      "requirement_id": "req_7",
+      "status": "pass",
+      "finding_count": 0,
+      "last_checked": "2024-12-16T08:00:00Z",
+      "evidence_location": "s3://grc-demo-evidence/lab3/s3-public-2024-12-16.json",
+      "details": "No public S3 buckets detected in CDE scope"
+    },
+    {
+      "requirement_id": "req_8",
+      "status": "fail",
+      "finding_count": 3,
+      "last_checked": "2024-12-16T08:00:00Z",
+      "evidence_location": "s3://grc-demo-evidence/lab4/mfa-users-2024-12-16.csv",
+      "details": "3 IAM users without MFA enabled"
+    },
+    {
+      "requirement_id": "req_10",
+      "status": "pass",
+      "finding_count": 0,
+      "last_checked": "2024-12-16T08:00:00Z",
+      "evidence_location": "s3://grc-demo-evidence/lab1/cloudtrail-2024-12-16.json",
+      "details": "CloudTrail enabled in all regions with S3 logging"
+    },
+    {
+      "requirement_id": "req_11",
+      "status": "fail",
+      "finding_count": 2,
+      "last_checked": "2024-12-15T10:30:00Z",
+      "evidence_location": "s3://grc-demo-evidence/vuln-scan/scan-2024-12-15.json",
+      "details": "2 open vulnerabilities from latest scan"
+    }
+  ],
+  "summary": {
+    "total_requirements": 6,
+    "passing": 3,
+    "failing": 3,
+    "compliance_score": 50.0
+  }
+}

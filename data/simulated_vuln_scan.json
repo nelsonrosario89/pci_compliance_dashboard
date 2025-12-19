@@ -1,0 +1,64 @@
+{
+  "scan_id": "SCAN-2024-001",
+  "scan_date": "2024-12-15T10:30:00Z",
+  "scanner": "AWS Inspector (Simulated)",
+  "findings": [
+    {
+      "id": "VULN-001",
+      "severity": "high",
+      "title": "Outdated TLS version detected",
+      "description": "TLS 1.0 is enabled on load balancer. PCI DSS 4.0 requires TLS 1.2 or higher.",
+      "resource_id": "arn:aws:elasticloadbalancing:us-east-1:123456789012:loadbalancer/app/prod-alb/abc123",
+      "resource_type": "Application Load Balancer",
+      "requirement_id": "req_11",
+      "detected_at": "2024-12-15T10:30:00Z",
+      "status": "open",
+      "remediation": "Update ALB security policy to ELBSecurityPolicy-TLS13-1-2-2021-06"
+    },
+    {
+      "id": "VULN-002",
+      "severity": "critical",
+      "title": "Unpatched CVE on EC2 instance",
+      "description": "CVE-2024-1234 affects OpenSSL version installed on instance. CVSS score 9.8.",
+      "resource_id": "i-0abc123def456789",
+      "resource_type": "EC2 Instance",
+      "requirement_id": "req_11",
+      "detected_at": "2024-12-14T08:15:00Z",
+      "status": "open",
+      "remediation": "Update OpenSSL to version 3.0.12 or later"
+    },
+    {
+      "id": "VULN-003",
+      "severity": "medium",
+      "title": "Missing security headers",
+      "description": "X-Content-Type-Options and X-Frame-Options headers not set on web application.",
+      "resource_id": "arn:aws:elasticloadbalancing:us-east-1:123456789012:loadbalancer/app/prod-alb/abc123",
+      "resource_type": "Application Load Balancer",
+      "requirement_id": "req_11",
+      "detected_at": "2024-12-15T10:30:00Z",
+      "status": "remediated",
+      "remediation": "Configure response headers in ALB or application"
+    },
+    {
+      "id": "VULN-004",
+      "severity": "low",
+      "title": "Informational disclosure in error pages",
+      "description": "Application error pages reveal server version information.",
+      "resource_id": "i-0abc123def456789",
+      "resource_type": "EC2 Instance",
+      "requirement_id": "req_11",
+      "detected_at": "2024-12-13T14:00:00Z",
+      "status": "remediated",
+      "remediation": "Configure custom error pages without version disclosure"
+    }
+  ],
+  "summary": {
+    "total_findings": 4,
+    "critical": 1,
+    "high": 1,
+    "medium": 1,
+    "low": 1,
+    "open": 2,
+    "remediated": 2
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "trend_data": [
+    {"date": "2024-12-01", "compliance_score": 33.3, "passing": 2, "failing": 4},
+    {"date": "2024-12-02", "compliance_score": 33.3, "passing": 2, "failing": 4},
+    {"date": "2024-12-03", "compliance_score": 33.3, "passing": 2, "failing": 4},
+    {"date": "2024-12-04", "compliance_score": 50.0, "passing": 3, "failing": 3},
+    {"date": "2024-12-05", "compliance_score": 50.0, "passing": 3, "failing": 3},
+    {"date": "2024-12-06", "compliance_score": 50.0, "passing": 3, "failing": 3},
+    {"date": "2024-12-07", "compliance_score": 50.0, "passing": 3, "failing": 3},
+    {"date": "2024-12-08", "compliance_score": 66.7, "passing": 4, "failing": 2},
+    {"date": "2024-12-09", "compliance_score": 66.7, "passing": 4, "failing": 2},
+    {"date": "2024-12-10", "compliance_score": 66.7, "passing": 4, "failing": 2},
+    {"date": "2024-12-11", "compliance_score": 50.0, "passing": 3, "failing": 3},
+    {"date": "2024-12-12", "compliance_score": 50.0, "passing": 3, "failing": 3},
+    {"date": "2024-12-13", "compliance_score": 50.0, "passing": 3, "failing": 3},
+    {"date": "2024-12-14", "compliance_score": 50.0, "passing": 3, "failing": 3},
+    {"date": "2024-12-15", "compliance_score": 50.0, "passing": 3, "failing": 3},
+    {"date": "2024-12-16", "compliance_score": 50.0, "passing": 3, "failing": 3}
+  ],
+  "events": [
+    {"date": "2024-12-04", "event": "Remediated S3 public bucket (Req 7)"},
+    {"date": "2024-12-08", "event": "Fixed CloudTrail gap in eu-west-1 (Req 10)"},
+    {"date": "2024-12-11", "event": "New MFA finding detected (Req 8)"}
+  ]
+}

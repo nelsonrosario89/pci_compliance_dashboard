@@ -1,0 +1,22 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.sqlite
+*.db
+
+# Virtual environments
+.venv/
+venv/
+
+# Local runtime artifacts
+.env
+.env.*
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Streamlit
+.streamlit/secrets.toml
