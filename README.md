@@ -91,14 +91,6 @@ This demonstrates how continuous monitoring catches both improvements and regres
 ### Trend Analysis
 ![Trend Analysis](./screenshots/trend_analysis.png)
 
-## Interview Talking Points
-
-> "This dashboard demonstrates continuous monitoring for PCI DSS 4.0. It pulls evidence from my AWS labs—CloudTrail validation, MFA enforcement, S3 public-access detection, security group drift—and maps each to PCI requirements.
->
-> The executive view shows an overall compliance score with pass/fail breakdowns. You can drill into any requirement to see open findings and link directly to S3 evidence. The trend chart shows how the score changed after remediating MFA gaps.
->
-> This shows I can build tooling that helps clients maintain compliance between annual assessments—not just pass a point-in-time audit."
-
 ## Future Enhancements
 
 - [ ] Live AWS data integration (S3, Security Hub)
@@ -109,4 +101,4 @@ This demonstrates how continuous monitoring catches both improvements and regres
 
 ## Author
 
-Nelson Rosario – [GitHub](https://github.com/nelsonrosario89) | [Portfolio](https://nelsonrosariogrcportfolio.com)
+Nelson Rosario – [Portfolio](https://nelsonrosariogrcportfolio.com)
