@@ -79,7 +79,17 @@ This demonstrates how continuous monitoring catches both improvements and regres
 
 ## Screenshots
 
-*(Add screenshots after running the dashboard)*
+### Executive Summary
+![Executive Summary](./screenshots/executive_summary.png)
+
+### Requirement Details
+![Requirement Details](./screenshots/requirement_details.png)
+
+### Findings
+![Findings](./screenshots/findings.png)
+
+### Trend Analysis
+![Trend Analysis](./screenshots/trend_analysis.png)
 
 ## Interview Talking Points
 
